@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/layout';
+import HeroSection from '@/components/sections/hero-section';
 import { siteMetadata } from '@/lib/metadata';
 
 export const metadata = siteMetadata;
@@ -6,14 +7,10 @@ export const metadata = siteMetadata;
 export default function Home() {
   return (
     <Layout>
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <h1 className="mb-4 text-4xl font-bold">Refine Barbers</h1>
-          <p className="text-xl text-gray-300">Precision Cuts, Refined Style</p>
-          <div className="mt-8">
-            <p className="text-gray-400">Hero section coming next...</p>
-          </div>
-        </div>
+      <HeroSection />
+      {/* Next sections will go here */}
+      <div className="flex h-screen items-center justify-center bg-gray-900">
+        <p className="text-xl text-white">About section coming next...</p>
       </div>
     </Layout>
   );

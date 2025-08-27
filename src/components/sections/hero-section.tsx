@@ -42,7 +42,7 @@ export default function HeroSection() {
         >
           {/* Placeholder for your R logo - replace with actual logo */}
           <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-white/10 backdrop-blur-sm">
-            <span className="text-3xl font-bold text-white">R</span>
+            <span className="text-3xl font-bold text-white"><img src="/images/circle-logo-1.png" alt="Refine Barbers logo image" /></span>
           </div>
         </motion.div>
 

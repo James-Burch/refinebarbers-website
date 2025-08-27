@@ -5,7 +5,8 @@ export const BRAND = {
     'Premium barbershop in Horwich offering expert skin fades, classic cuts, and modern styling.',
   phone: '+44 1204 XXX XXX',
   address: 'Horwich, Bolton, Greater Manchester',
-  booksyUrl: 'https://booksy.com/en-gb/your-booksy-link',
+  booksyUrl:
+    'https://booksy.com/en-gb/93228_refine-barbers_barber_624511_horwich?do=invite&_branch_match_id=1430328955757368443&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVL7MMjigvsAgL802yrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAlrxLzTwAAAA%3D',
 } as const;
 
 export const SERVICES = [

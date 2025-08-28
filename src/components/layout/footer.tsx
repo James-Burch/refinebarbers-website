@@ -53,7 +53,7 @@ export default function Footer() {
           >
             <div className="mb-4 flex items-center justify-center lg:justify-start">
               <Image
-                src="/images/circle-logo-1.png"
+                src="/images/circle-logo-1.webp"
                 alt="Refine Barbers Logo"
                 width={60}
                 height={60}

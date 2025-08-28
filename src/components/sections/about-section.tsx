@@ -18,15 +18,15 @@ export default function AboutSection() {
   ];
 
   return (
-    <section ref={ref} className="bg-white py-20 text-black">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+    <section ref={ref} className="bg-white py-16 text-black sm:py-20">
+      <div className="container mx-auto px-6 sm:px-4">
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left Side - About Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             {/* Small Logo Accent */}
             <motion.div
@@ -35,14 +35,14 @@ export default function AboutSection() {
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
               }
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-6"
+              className="mb-4 sm:mb-6"
             >
               <Image
-                src="/images/circle-logo-1.png"
+                src="/images/circle-logo-1.webp"
                 alt="Refine Barbers Logo"
-                width={80}
-                height={80}
-                className="rounded-full"
+                width={60}
+                height={60}
+                className="rounded-full sm:h-20 sm:w-20"
               />
             </motion.div>
 
@@ -50,7 +50,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl font-bold text-black md:text-5xl"
+              className="text-3xl font-bold text-black sm:text-4xl md:text-5xl"
             >
               About {BRAND.name}
             </motion.h2>
@@ -59,7 +59,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg leading-relaxed text-gray-700"
+              className="text-base leading-relaxed text-gray-700 sm:text-lg"
             >
               Located in the heart of Horwich, {BRAND.name} combines traditional
               barbering techniques with modern style. Our skilled team delivers
@@ -71,7 +71,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-lg leading-relaxed text-gray-700"
+              className="text-base leading-relaxed text-gray-700 sm:text-lg"
             >
               Whether you're after a classic gentleman's cut or the latest fade
               trends, we pride ourselves on attention to detail and creating an
@@ -84,13 +84,13 @@ export default function AboutSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            <h3 className="mb-8 text-center text-2xl font-semibold text-black lg:text-left">
+            <h3 className="mb-6 text-center text-xl font-semibold text-black sm:mb-8 sm:text-2xl lg:text-left">
               Meet the Team
             </h3>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={member.id}
@@ -112,7 +112,7 @@ export default function AboutSection() {
 
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <span className="font-semibold text-white">
+                      <span className="px-2 text-center text-sm font-semibold text-white sm:text-base">
                         {member.name}
                       </span>
                     </div>
@@ -125,7 +125,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="mt-6 text-center text-sm text-gray-600 lg:text-left"
+              className="mt-4 text-center text-sm text-gray-600 sm:mt-6 lg:text-left"
             >
               Each barber brings their unique style and expertise to deliver the
               perfect cut for every client.

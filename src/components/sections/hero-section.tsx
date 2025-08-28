@@ -16,10 +16,9 @@ export default function HeroSection() {
           loop
           playsInline
           className="h-full w-full object-cover"
-          poster="/images/circle-logo-1.webp" // Fallback image while video loads
+          poster="/images/circle-logo-1.webp"
         >
           <source src="/videos/barbershop-hero-1.mp4" type="video/mp4" />
-          {/* Fallback for browsers that don't support video */}
           <div className="h-full w-full bg-gradient-to-br from-gray-900 to-black" />
         </video>
       </div>
@@ -28,7 +27,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-10 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center">
+      <div className="relative z-20 flex h-full flex-col items-center justify-center px-6 text-center sm:px-4">
         {/* Logo Animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}
@@ -39,9 +38,9 @@ export default function HeroSection() {
             type: 'spring',
             stiffness: 100,
           }}
-          className="mb-8"
+          className="mb-6 sm:mb-8"
         >
-          <div className="mx-auto h-32 w-32 rounded-full bg-white/10 p-2 backdrop-blur-sm">
+          <div className="mx-auto h-28 w-28 rounded-full bg-white/10 p-2 backdrop-blur-sm sm:h-32 sm:w-32">
             <Image
               src="/images/circle-logo-1.webp"
               alt="Refine Barbers Logo"
@@ -57,7 +56,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mb-4 text-5xl font-bold text-white md:text-7xl"
+          className="mb-3 text-4xl font-bold text-white sm:mb-4 sm:text-5xl md:text-7xl"
         >
           {BRAND.name}
         </motion.h1>
@@ -67,7 +66,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.5 }}
-          className="mb-8 text-xl text-gray-300 md:text-2xl"
+          className="mb-8 px-4 text-lg text-gray-300 sm:text-xl md:text-2xl"
         >
           {BRAND.tagline}
         </motion.p>
@@ -77,12 +76,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
+          className="mb-16 sm:mb-0"
         >
           <Link
             href={BRAND.booksyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden bg-white px-8 py-4 text-lg font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
+            className="group relative min-h-[44px] overflow-hidden bg-white px-6 py-3 text-base font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:px-8 sm:py-4 sm:text-lg"
           >
             <span className="relative z-10">Book Appointment</span>
             <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -94,7 +94,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 2.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 sm:bottom-8"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -102,7 +102,7 @@ export default function HeroSection() {
             className="text-white"
           >
             <svg
-              className="h-6 w-6"
+              className="h-5 w-5 sm:h-6 sm:w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

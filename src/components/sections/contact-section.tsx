@@ -30,34 +30,36 @@ export default function ContactSection() {
   };
 
   return (
-    <section ref={ref} className="bg-white py-20 text-black">
-      <div className="container mx-auto max-w-6xl px-4">
+    <section ref={ref} className="bg-white py-16 text-black sm:py-20">
+      <div className="container mx-auto max-w-6xl px-6 sm:px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-16 text-center"
+          className="mb-12 text-center sm:mb-16"
         >
-          <h2 className="mb-4 text-4xl font-bold md:text-5xl">Visit Us</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
+          <h2 className="mb-3 text-3xl font-bold sm:mb-4 sm:text-4xl md:text-5xl">
+            Visit Us
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
             Professional barbering services in the heart of Horwich
           </p>
         </motion.div>
 
         {/* Contact Grid */}
-        <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12">
+        <div className="mb-12 grid grid-cols-1 gap-8 sm:mb-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {/* Opening Hours */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center lg:text-left"
+            className="text-center md:col-span-2 lg:col-span-1 lg:text-left"
           >
-            <h3 className="mb-6 border-b-2 border-black pb-2 text-2xl font-bold">
+            <h3 className="mb-4 border-b-2 border-black pb-2 text-xl font-bold sm:mb-6 sm:text-2xl">
               Opening Hours
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {contactInfo.hours.map((schedule, index) => (
                 <div
                   key={schedule.day}
@@ -83,7 +85,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center lg:text-left"
           >
-            <h3 className="mb-6 border-b-2 border-black pb-2 text-2xl font-bold">
+            <h3 className="mb-4 border-b-2 border-black pb-2 text-xl font-bold sm:mb-6 sm:text-2xl">
               Contact Info
             </h3>
             <div className="space-y-4">
@@ -102,7 +104,7 @@ export default function ContactSection() {
                 <h4 className="mb-1 font-semibold text-gray-700">Phone</h4>
                 <Link
                   href={`tel:${contactInfo.phone}`}
-                  className="text-sm text-gray-600 transition-colors duration-300 hover:text-black sm:text-base"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 transition-colors duration-300 hover:text-black sm:text-base"
                 >
                   {contactInfo.phone}
                 </Link>
@@ -112,7 +114,7 @@ export default function ContactSection() {
                 <h4 className="mb-1 font-semibold text-gray-700">Email</h4>
                 <Link
                   href={`mailto:${contactInfo.email}`}
-                  className="text-sm break-words text-gray-600 transition-colors duration-300 hover:text-black sm:text-base"
+                  className="inline-flex min-h-[44px] items-center text-sm break-words text-gray-600 transition-colors duration-300 hover:text-black sm:text-base"
                 >
                   {contactInfo.email}
                 </Link>
@@ -125,14 +127,14 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center lg:text-left"
+            className="text-center md:col-span-2 lg:col-span-1 lg:text-left"
           >
-            <h3 className="mb-6 border-b-2 border-black pb-2 text-2xl font-bold">
+            <h3 className="mb-4 border-b-2 border-black pb-2 text-xl font-bold sm:mb-6 sm:text-2xl">
               Find Us
             </h3>
             <div className="relative h-48 w-full overflow-hidden rounded-lg bg-gray-200 sm:h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.123456789!2d-2.5432109876543!3d53.591234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDM1JzI4LjQiTiAywrAzMicxMS42Ilc!5e0!3m2!1sen!2suk!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2367.742584544067!2d-2.551395323667829!3d53.5980545558607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b09ae54f3b37b%3A0xfbe5ad3205d74ef8!2sRefine%20Barbers!5e0!3m2!1sen!2suk!4v1756343771218!5m2!1sen!2suk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -156,17 +158,17 @@ export default function ContactSection() {
           className="text-center"
         >
           <div className="mx-auto max-w-2xl rounded-lg bg-black p-6 text-white sm:p-8">
-            <h3 className="mb-4 text-xl font-bold sm:text-2xl">
+            <h3 className="mb-3 text-lg font-bold sm:mb-4 sm:text-xl lg:text-2xl">
               Ready to book your appointment?
             </h3>
-            <p className="mb-6 text-sm text-gray-300 sm:text-base">
+            <p className="mb-4 text-sm text-gray-300 sm:mb-6 sm:text-base">
               Book online through Booksy for the fastest service
             </p>
             <Link
               href={BRAND.booksyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-100 sm:px-8 sm:py-4 sm:text-base"
+              className="inline-block min-h-[44px] rounded bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-100 sm:px-8 sm:py-4 sm:text-base"
             >
               Book Now on Booksy
             </Link>

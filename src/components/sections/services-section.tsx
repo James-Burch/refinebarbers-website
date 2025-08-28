@@ -91,7 +91,7 @@ export default function ServicesSection() {
               Ready to book your appointment?
             </h3>
             <p className="text-gray-300">
-              View our full menu, check availability, and book online through
+              View our full list of services, check availability, and book online through
               Booksy
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function ServicesSection() {
             rel="noopener noreferrer"
             className="group relative inline-block overflow-hidden bg-white px-10 py-4 text-lg font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
           >
-            <span className="relative z-10">View Full Menu & Book Now</span>
+            <span className="relative z-10">View Full Services & Book Now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </Link>
 

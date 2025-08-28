@@ -60,7 +60,7 @@ export default function ContactSection() {
               Opening Hours
             </h3>
             <div className="space-y-2 sm:space-y-3">
-              {contactInfo.hours.map((schedule, index) => (
+              {contactInfo.hours.map((schedule) => (
                 <div
                   key={schedule.day}
                   className="flex items-center justify-between text-sm sm:text-base"

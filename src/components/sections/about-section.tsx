@@ -73,9 +73,9 @@ export default function AboutSection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-base leading-relaxed text-gray-700 sm:text-lg"
             >
-              Whether you're after a classic gentleman's cut or the latest fade
-              trends, we pride ourselves on attention to detail and creating an
-              experience that's both professional and relaxed.
+              Whether you&apos;re after a classic gentleman&apos;s cut or the
+              latest fade trends, we pride ourselves on attention to detail and
+              creating an experience that&apos;s both professional and relaxed.
             </motion.p>
           </motion.div>
 

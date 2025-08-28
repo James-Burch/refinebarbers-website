@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/layout';
+import Navigation from '@/components/layout/navigation';
 import HeroSection from '@/components/sections/hero-section';
 import AboutSection from '@/components/sections/about-section';
 import ServicesSection from '@/components/sections/services-section';
@@ -10,11 +11,17 @@ export const metadata = siteMetadata;
 export default function Home() {
   return (
     <Layout>
+      <Navigation />
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ContactSection />
-      {/* Footer coming next */}
+      <div id="about">
+        <AboutSection />
+      </div>
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div id="contact">
+        <ContactSection />
+      </div>
     </Layout>
   );
 }

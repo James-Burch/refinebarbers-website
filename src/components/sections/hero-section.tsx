@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { BRAND } from '@/lib/constants';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -15,9 +16,9 @@ export default function HeroSection() {
           loop
           playsInline
           className="h-full w-full object-cover"
-          poster="/images/circle-logo.png" // Fallback image while video loads
+          poster="/images/circle-logo-1.webp" // Fallback image while video loads
         >
-          <source src="/videos/barbershop-hero.mp4" type="video/mp4" />
+          <source src="/videos/barbershop-hero-1.mp4" type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
           <div className="h-full w-full bg-gradient-to-br from-gray-900 to-black" />
         </video>
@@ -40,9 +41,14 @@ export default function HeroSection() {
           }}
           className="mb-8"
         >
-          {/* Placeholder for your R logo - replace with actual logo */}
-          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-white/10 backdrop-blur-sm">
-            <span className="text-3xl font-bold text-white"><img src="/images/circle-logo-1.png" alt="Refine Barbers logo image" /></span>
+          <div className="mx-auto h-32 w-32 rounded-full bg-white/10 p-2 backdrop-blur-sm">
+            <Image
+              src="/images/circle-logo-1.webp"
+              alt="Refine Barbers Logo"
+              width={120}
+              height={120}
+              className="h-full w-full rounded-full object-cover"
+            />
           </div>
         </motion.div>
 

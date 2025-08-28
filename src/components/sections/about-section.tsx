@@ -11,16 +11,10 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const teamMembers = [
-    { name: 'Barber 1', image: '/images/colecaisley-pfp.png', id: 'cole' },
-    { name: 'Barber 2', image: '/images/joshgildea-pfp.png', id: 'josh' },
-    { name: 'Barber 3', image: '/images/robcunliffe-pfp.png', id: 'rob' },
-    // Space ready for Paris
-    {
-      name: 'Paris',
-      image: '/images/paris-pfp.png',
-      id: 'paris',
-      coming: true,
-    },
+    { name: 'Cole Caisley', image: '/images/colecaisley-pfp.webp', id: 'cole' },
+    { name: 'Josh Gildea', image: '/images/joshgildea-pfp.webp', id: 'josh' },
+    { name: 'Rob Cunliffe', image: '/images/robcunliffe-pfp.webp', id: 'rob' },
+    { name: 'Paris Nuttall', image: '/images/paris-pfp.webp', id: 'paris' },
   ];
 
   return (
@@ -107,30 +101,14 @@ export default function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                   className="group relative"
                 >
-                  <div
-                    className={`relative overflow-hidden rounded-lg ${member.coming ? 'opacity-50' : ''}`}
-                  >
-                    {member.coming ? (
-                      // Placeholder for Paris
-                      <div className="flex aspect-square items-center justify-center bg-gray-200">
-                        <div className="text-center">
-                          <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-gray-300">
-                            <span className="text-2xl font-bold text-gray-600">
-                              P
-                            </span>
-                          </div>
-                          <p className="text-sm text-gray-600">Coming Soon</p>
-                        </div>
-                      </div>
-                    ) : (
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={200}
-                        height={200}
-                        className="aspect-square object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    )}
+                  <div className="relative overflow-hidden rounded-lg">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={200}
+                      height={200}
+                      className="aspect-square object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
 
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
